@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: bisque;
     margin: 0;
@@ -84,7 +88,6 @@ p {
 
 .buttons {
     display: flex;
-    gap: 5px;
 }
 
 .buttons input {
@@ -92,22 +95,17 @@ p {
 }
 
 .buttons label {
+    flex-shrink: 0;
+    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-
-    width: 25px;
-    height: 25px;
+    width: 35px;
+    height: 35px;
     cursor: pointer;
-}
-
-.buttons label::before {
-    content: "";
-    width: 15px;
-    height: 15px;
     border-radius: 50%;
     background: white;
-    cursor: pointer;
+    background-clip: content-box;
     transition: 0.3s;
 }
 
@@ -147,19 +145,19 @@ p {
     transform: translateX(-300%);
 }
 
-#slide1:checked ~ .bot-container .buttons label[for="slide1"]::before {
+#slide1:checked ~ .bot-container .buttons label[for="slide1"] {
     background: blue;
 }
 
-#slide2:checked ~ .bot-container .buttons label[for="slide2"]::before {
+#slide2:checked ~ .bot-container .buttons label[for="slide2"] {
     background: blue;
 }
 
-#slide3:checked ~ .bot-container .buttons label[for="slide3"]::before {
+#slide3:checked ~ .bot-container .buttons label[for="slide3"] {
     background: blue;
 }
 
-#slide4:checked ~ .bot-container .buttons label[for="slide4"]::before {
+#slide4:checked ~ .bot-container .buttons label[for="slide4"] {
     background: blue;
 }
 
