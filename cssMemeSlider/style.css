@@ -15,7 +15,7 @@ body {
     flex-direction: column;
     background-color: rgb(83, 1, 131);
     width: 50vw;
-    height: 70vh;
+    height: 50vh;
 }
 
 input {
@@ -34,7 +34,10 @@ input {
 }
 
 .slide {
-    padding: 20px;
+    display: flex;
+    padding: 20px 20px 0 20px;
+    justify-content: center;
+    align-items: center;
     box-sizing: border-box;
     width: 100%;
     height: 100%;
@@ -42,8 +45,9 @@ input {
 }
 
 .slide img {
-    width: 100%;
-    height: 100%;
+    border-radius: 20%;
+    max-width: 80%;
+    max-height: 80%;
     object-fit: contain;
 }
 
@@ -80,7 +84,7 @@ p {
 
 .buttons {
     display: flex;
-    gap: 10px;
+    gap: 5px;
 }
 
 .buttons input {
@@ -88,6 +92,17 @@ p {
 }
 
 .buttons label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.buttons label::before {
+    content: "";
     width: 15px;
     height: 15px;
     border-radius: 50%;
@@ -132,18 +147,18 @@ p {
     transform: translateX(-300%);
 }
 
-#slide1:checked ~ .bot-container .buttons label[for="slide1"] {
+#slide1:checked ~ .bot-container .buttons label[for="slide1"]::before {
     background: blue;
 }
 
-#slide2:checked ~ .bot-container .buttons label[for="slide2"] {
+#slide2:checked ~ .bot-container .buttons label[for="slide2"]::before {
     background: blue;
 }
 
-#slide3:checked ~ .bot-container .buttons label[for="slide3"] {
+#slide3:checked ~ .bot-container .buttons label[for="slide3"]::before {
     background: blue;
 }
 
-#slide4:checked ~ .bot-container .buttons label[for="slide4"] {
+#slide4:checked ~ .bot-container .buttons label[for="slide4"]::before {
     background: blue;
 }
