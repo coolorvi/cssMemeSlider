@@ -24,7 +24,7 @@ input {
 
 .slider {
     width: 100%;
-    height: 80%;
+    height: 50%;
     overflow: hidden;
 }
 
@@ -52,7 +52,7 @@ input {
 }
 
 .bot-container {
-    margin-top: 10px;
+    margin-top: 80px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -161,4 +161,10 @@ p {
 
 #slide4:checked ~ .bot-container .buttons label[for="slide4"]::before {
     background: blue;
+}
+
+@media (max-width: 500px) {
+    .bot-container {
+        flex-direction: column-reverse;
+    }
 }
