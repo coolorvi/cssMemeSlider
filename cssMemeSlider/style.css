@@ -1,0 +1,149 @@
+body {
+    background-color: bisque;
+    margin: 0;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.main-container {
+    border-radius: 30%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(83, 1, 131);
+    width: 50vw;
+    height: 70vh;
+}
+
+input {
+    display: none;
+}
+
+.slider {
+    width: 100%;
+    height: 80%;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.bot-container {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.descriptions {
+    overflow: hidden;
+    width: 20%;
+}
+
+.descriptions-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    transition: transform 0.5s ease;
+}
+
+.description {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+p {
+    color: aliceblue;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.buttons input {
+    display: none;
+}
+
+.buttons label {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.buttons label:hover {
+    transform: scale(1.2);
+}
+
+#slide1:checked ~ .bot-container .descriptions-wrapper {
+    transform: translateX(0);
+}
+
+#slide2:checked ~ .bot-container .descriptions-wrapper {
+    transform: translateX(-100%);
+}
+
+#slide3:checked ~ .bot-container .descriptions-wrapper {
+    transform: translateX(-200%);
+}
+
+#slide4:checked ~ .bot-container .descriptions-wrapper {
+    transform: translateX(-300%);
+}
+
+#slide1:checked ~ .slider .slides {
+    transform: translateX(0);
+}
+
+#slide2:checked ~ .slider .slides {
+    transform: translateX(-100%);
+}
+
+#slide3:checked ~ .slider .slides {
+    transform: translateX(-200%);
+}
+
+#slide4:checked ~ .slider .slides {
+    transform: translateX(-300%);
+}
+
+#slide1:checked ~ .bot-container .buttons label[for="slide1"] {
+    background: blue;
+}
+
+#slide2:checked ~ .bot-container .buttons label[for="slide2"] {
+    background: blue;
+}
+
+#slide3:checked ~ .bot-container .buttons label[for="slide3"] {
+    background: blue;
+}
+
+#slide4:checked ~ .bot-container .buttons label[for="slide4"] {
+    background: blue;
+}
